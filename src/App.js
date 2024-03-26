@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Main from './component/main';
 import { Route, Routes } from 'react-router';
 import Addcart from './component/Addcart';
+import { Card } from 'react-bootstrap';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -43,6 +44,8 @@ console.log(cartt)
         <Route path='/' element={<Main cart={cartt} addHandle={addHandle} setCart={setCart} products={products} setCount={setCount} setProducts={setProducts} />} />
         <Route path='/addcart' element={<Addcart removeHandle={removeHandle} cart={cartt} setCart={setCart} />} />
       </Routes>
+
+      
     </div>
   );
 }
